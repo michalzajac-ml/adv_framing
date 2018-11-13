@@ -4,7 +4,7 @@ import time
 import os
 import sys
 
-from utils import AverageMeter, calculate_accuracy
+from .utils_file import AverageMeter, calculate_accuracy
 
 
 def train_epoch(epoch, data_loader, model, criterion, optimizer, opt,

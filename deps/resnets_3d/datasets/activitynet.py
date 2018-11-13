@@ -7,7 +7,7 @@ import json
 import copy
 import math
 
-from utils import load_value_file
+from ..utils_file import load_value_file
 
 
 def pil_loader(path):

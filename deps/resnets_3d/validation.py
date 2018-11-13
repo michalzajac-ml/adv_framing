@@ -3,7 +3,7 @@ from torch.autograd import Variable
 import time
 import sys
 
-from utils import AverageMeter, calculate_accuracy
+from .utils_file import AverageMeter, calculate_accuracy
 
 
 def val_epoch(epoch, data_loader, model, criterion, opt, logger):

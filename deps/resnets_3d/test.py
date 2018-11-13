@@ -6,7 +6,7 @@ import os
 import sys
 import json
 
-from utils import AverageMeter
+from .utils_file import AverageMeter
 
 
 def calculate_video_results(output_buffer, video_id, test_results, class_names):

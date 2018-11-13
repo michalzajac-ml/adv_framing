@@ -7,20 +7,20 @@ from torch import nn
 from torch import optim
 from torch.optim import lr_scheduler
 
-from opts import parse_opts
-from model import generate_model
-from mean import get_mean, get_std
-from spatial_transforms import (
+from .opts import parse_opts
+from .model import generate_model
+from .mean import get_mean, get_std
+from .spatial_transforms import (
     Compose, Normalize, Scale, CenterCrop, CornerCrop, MultiScaleCornerCrop,
     MultiScaleRandomCrop, RandomHorizontalFlip, ToTensor)
-from temporal_transforms import LoopPadding, TemporalRandomCrop
-from target_transforms import ClassLabel, VideoID
-from target_transforms import Compose as TargetCompose
-from dataset import get_training_set, get_validation_set, get_test_set
-from utils import Logger
-from train import train_epoch
-from validation import val_epoch
-import test
+from .temporal_transforms import LoopPadding, TemporalRandomCrop
+from .target_transforms import ClassLabel, VideoID
+from .target_transforms import Compose as TargetCompose
+from .dataset import get_training_set, get_validation_set, get_test_set
+from .utils_file import Logger
+from .train import train_epoch
+from .validation import val_epoch
+from .test import test
 
 if __name__ == '__main__':
     opt = parse_opts()
@@ -159,4 +159,4 @@ if __name__ == '__main__':
             shuffle=False,
             num_workers=opt.n_threads,
             pin_memory=True)
-        test.test(test_loader, model, opt, test_data.class_names)
+        test(test_loader, model, opt, test_data.class_names)
