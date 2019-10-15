@@ -43,9 +43,11 @@ where you should set `WIDTH` of the framing.
 ## Citation
 If you found this code useful, please use the following citation:
 
-    @paper{zajac2019framing,
-      title={Adversarial Framing for Image and Video Classification},
-      author={Zaj\k{a}c, Micha\l{} and \.Zo\l{}na, Konrad and Rostamzadeh, Negar and Pinheiro, Pedro},
-      conference={AAAI Conference on Artificial Intelligence},
+    @inproceedings{zajac2019adversarial,
+      title={Adversarial framing for image and video classification},
+      author={Zajac, Michal and Zolna, Konrad and Rostamzadeh, Negar and Pinheiro, Pedro O},
+      booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+      volume={33},
+      pages={10077--10078},
       year={2019}
     }
